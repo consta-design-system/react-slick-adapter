@@ -1,4 +1,4 @@
-# [Дизайн-система Consta](https://consta.design/) | slider
+# [Дизайн-система Consta](https://consta.design/) | reactSlickAdapter
 
 Компонет слайдера
 

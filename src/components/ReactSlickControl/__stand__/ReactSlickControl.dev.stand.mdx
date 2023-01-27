@@ -1,0 +1,49 @@
+import { ReactSlickControlExample } from './examples/ReactSlickControlExample/ReactSlickControlExample';
+
+```tsx
+import { ReactSlickControl } from '@consta/react-slick-adapter/ReactSlickControl';
+```
+
+С помощью компонента `ReactSlickControl` можно переопределить дефолтные контролы.
+
+## Свойства
+
+| Параметры | Тип              | По умолчанию | Описание     |
+| --------- | ---------------- | ------------ | ------------ |
+| `type?`   | `'prev', 'next'` | `prev`       | Тип контрола |
+
+## Пример
+
+```tsx
+import React from 'react';
+import Slider from 'react-slick';
+
+import { ReactSlickControl } from '@consta/react-slick-adapter/ReactSlickControl';
+import { cnReactSlick } from '@consta/react-slick-adapter/ReactSlick';
+
+const items: string[] = [
+  'https://4kwallpapers.com/images/walls/thumbs_2t/5894.jpg',
+  'https://images.unsplash.com/photo-1581610186406-5f6e9f9edbc1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MnwyMjAzODh8fGVufDB8fHx8&w=1000&q=80',
+  'https://4kwallpapers.com/images/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-2880x1800-1455.jpg',
+  'https://www.gannett-cdn.com/presto/2019/09/24/USAT/ca65ec63-180e-4edd-b92e-38cd0af795a9-catalina.jpg?crop=1279%2C720%2Cx0%2Cy278&width=1200',
+];
+
+export const ReactSlickControlExample = () => {
+  return (
+    <Slider
+      dots
+      className={cnReactSlick()}
+      nextArrow={<ReactSlickControl type="next" />}
+      prevArrow={<ReactSlickControl type="prev" />}
+    >
+      {items.map((image) => (
+        <div>
+          <img alt="" src={image} />
+        </div>
+      ))}
+    </Slider>
+  );
+};
+```
+
+<ReactSlickControlExample />

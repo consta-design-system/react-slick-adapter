@@ -3,8 +3,8 @@ import { createConfig } from '@consta/stand';
 import image from './ConstaImage.png';
 
 export const { createStand } = createConfig({
-  title: 'Consta Slider',
-  id: 'slider',
+  title: 'Consta react-slick-adapter',
+  id: 'react-slick-adapter',
   groups: [
     {
       title: 'Документация',
@@ -12,14 +12,19 @@ export const { createStand } = createConfig({
       initialOpen: true,
     },
     {
-      title: 'Компоненты',
-      id: 'components',
+      title: 'Миксины',
+      id: 'mixs',
+      initialOpen: true,
+    },
+    {
+      title: 'Адаптеры',
+      id: 'adapters',
       view: 'card',
       initialOpen: true,
     },
   ],
-  group: 'Отдельные компоненты',
+  group: 'Адаптеры',
   image,
-  description: 'Библиотека реализующая слайдер на основе tiny-slider.',
-  repositoryUrl: 'https://github.com/consta-design-system/slider',
+  description: 'Библиотека реализующая адаптер для react-slick.',
+  repositoryUrl: 'https://github.com/consta-design-system/react-slick-adapter',
 });

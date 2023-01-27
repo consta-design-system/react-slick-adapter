@@ -1,0 +1,61 @@
+.rsa--ReactSlickIndicator {
+  &[type='button'] {
+    width: auto;
+    height: auto;
+    padding: 0;
+  }
+
+  &::before {
+    display: none;
+  }
+
+  &-Image {
+    --indicator-image-border-color: transparent;
+    overflow: hidden;
+    width: var(--space-3xl);
+    height: var(--space-3xl);
+    border-radius: var(--control-radius);
+    outline: var(--space-3xs) solid transparent;
+    transition: border-color 0.3s;
+
+    & > img {
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-Dot {
+    width: var(--space-xs);
+    height: var(--space-xs);
+    background-color: var(--color-typo-ghost);
+    border-radius: var(--control-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  &-Text,
+  &-Icon {
+    color: var(--color-typo-ghost);
+    transition: color 0.3s;
+
+    &.tns-nav-active {
+      color: var(--color-typo-brand);
+    }
+  }
+}
+
+.slick-active > .rsa--ReactSlickIndicator {
+  & > .rsa--ReactSlickIndicator-Dot {
+    background-color: var(--color-typo-brand);
+  }
+
+  & > .rsa--ReactSlickIndicator-Text,
+  & > .rsa--ReactSlickIndicator-Icon {
+    color: var(--color-typo-brand);
+  }
+
+  & > .rsa--ReactSlickIndicator-Image {
+    outline: var(--space-3xs) solid var(--color-control-bg-active);
+  }
+}

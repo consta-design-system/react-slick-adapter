@@ -1,0 +1,26 @@
+.rsa--ReactSlickControl.slick-arrow {
+  position: absolute;
+  z-index: 2;
+  width: var(--space-xl);
+  height: var(--space-xl);
+  color: var(--color-control-typo-clear);
+  background: var(--color-control-bg-clear);
+
+  &:hover,
+  &:focus {
+    color: var(--color-control-typo-clear-hover);
+    background: var(--color-control-bg-clear-hover);
+  }
+
+  &.Button::after {
+    display: none;
+  }
+
+  &.rsa--ReactSlickControl_type_prev {
+    left: var(--space-m);
+  }
+
+  &.rsa--ReactSlickControl_type_next {
+    right: var(--space-m);
+  }
+}
