@@ -12,6 +12,11 @@ export const { createStand } = createConfig({
       initialOpen: true,
     },
     {
+      title: 'Компоненты',
+      id: 'components',
+      initialOpen: true,
+    },
+    {
       title: 'Миксины',
       id: 'mixs',
       initialOpen: true,

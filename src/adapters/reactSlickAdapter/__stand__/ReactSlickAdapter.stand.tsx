@@ -7,5 +7,4 @@ export default createStand({
   description: 'Адаптер для react-slick',
   version: '0.0.1',
   status: 'canary',
-  order: 10,
 });

@@ -71,14 +71,23 @@
   }
 
   & .slick-arrow {
+    position: absolute;
     z-index: 2;
+    top: 50%;
     display: flex !important;
     width: var(--space-xl);
     height: var(--space-xl);
+    margin: 0;
     color: var(--color-control-typo-clear);
     background: var(--color-control-bg-clear);
+    border: none;
     border-radius: 50%;
+    outline: none;
+    font-size: 0;
+    line-height: 0;
+    cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    transform: translate(0, -50%);
 
     &:focus,
     &:focus:hover {
@@ -116,21 +125,18 @@
       height: var(--space-s);
       background: var(--color-control-typo-ghost);
       mask-position: center;
+      mask-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zLjI5Mjg1IDYuMDAwMDJMNy4yNjc3MiAyLjAyNTE1TDcuOTc0ODMgMi43MzIyNUw0LjcwNzA2IDYuMDAwMDJMNy45NzQ4MyA5LjI2Nzc4TDcuMjY3NzIgOS45NzQ4OUwzLjI5Mjg1IDYuMDAwMDJaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K');
     }
 
     &.slick-prev {
       left: var(--react-slick-left-button-offset);
-
-      &::after {
-        mask-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zLjI5Mjg1IDYuMDAwMDJMNy4yNjc3MiAyLjAyNTE1TDcuOTc0ODMgMi43MzIyNUw0LjcwNzA2IDYuMDAwMDJMNy45NzQ4MyA5LjI2Nzc4TDcuMjY3NzIgOS45NzQ4OUwzLjI5Mjg1IDYuMDAwMDJaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K');
-      }
     }
 
     &.slick-next {
       right: var(--space-m);
 
       &::after {
-        mask-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik04Ljk3NDgzIDYuMDAwMDJMNC45OTk5NSA5Ljk3NDg5TDQuMjkyODUgOS4yNjc3OEw3LjU2MDYxIDYuMDAwMDJMNC4yOTI4NSAyLjczMjI1TDQuOTk5OTUgMi4wMjUxNUw4Ljk3NDgzIDYuMDAwMDJaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K');
+        transform: rotate(180deg);
       }
     }
   }
@@ -161,6 +167,8 @@
       width: auto;
       height: auto;
       margin: 0;
+      font-size: var(--space-xs);
+      line-height: 1em;
 
       &.slick-active > button:not(.rsa--ReactSlickIndicator) {
         background-color: var(--color-typo-brand);

@@ -2,7 +2,11 @@
   &[type='button'] {
     width: auto;
     height: auto;
+    margin: 0;
     padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
   }
 
   &::before {
