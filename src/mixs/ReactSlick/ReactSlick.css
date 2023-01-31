@@ -1,0 +1,207 @@
+.rsa--ReactSlickAdapter {
+  --react-slick-left-button-offset: var(--space-m);
+
+  &.slick-slider {
+    display: flex;
+    flex-direction: var(--react-slick-direction);
+    width: 100%;
+    height: 100%;
+    background: var(--color-bg-default);
+  }
+
+  &_indicatorsPosition {
+    &_left {
+      --react-slick-direction: row-reverse;
+      --react-slick-indicators-direction: column;
+      --react-slick-indicators-width: max-content;
+      --react-slick-indicators-height: 100%;
+
+      &.rsa--ReactSlickAdapter_indicatorsType {
+        &_dots,
+        &_number {
+          --react-slick-left-button-offset:
+            calc(
+              var(--space-xl) + var(--space-m)
+            );
+        }
+
+        &_icon {
+          --react-slick-left-button-offset:
+            calc(
+              var(--space-xl) + var(--space-m) + var(--space-2xs)
+            );
+        }
+
+        &_photo {
+          --react-slick-left-button-offset: var(--space-5xl);
+        }
+      }
+
+      & .slick-dots {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+
+    &_bottom {
+      --react-slick-direction: column;
+      --react-slick-indicators-direction: row;
+      --react-slick-indicators-width: 100%;
+      --react-slick-indicators-height: max-content;
+    }
+  }
+
+  & .slick-slide {
+    box-sizing: border-box;
+    padding: 0 var(--space-2xs);
+
+    & > div {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+  }
+
+  & .slick-list {
+    height: 100%;
+  }
+
+  & .slick-track {
+    height: 100%;
+  }
+
+  & .slick-arrow {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    display: flex !important;
+    width: var(--space-xl);
+    height: var(--space-xl);
+    margin: 0;
+    color: var(--color-control-typo-clear);
+    background: var(--color-control-bg-clear);
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    font-size: 0;
+    line-height: 0;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    transform: translate(0, -50%);
+
+    &:focus,
+    &:focus:hover {
+      outline: none;
+      box-shadow: 0 0 0 3px var(--color-control-bg-focus);
+      animation: Animation--MixFocus 0.5s ease-in;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--color-control-typo-clear-hover);
+      background: var(--color-control-bg-clear-hover);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: var(--space-xl);
+      height: var(--space-xl);
+      background: var(--color-bg-default);
+      border-radius: 50%;
+      opacity: 1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: calc(var(--space-xs) - var(--space-3xs));
+      left: calc(var(--space-xs) - var(--space-3xs));
+      display: block;
+      width: var(--space-s);
+      height: var(--space-s);
+      background: var(--color-control-typo-ghost);
+      mask-position: center;
+      mask-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zLjI5Mjg1IDYuMDAwMDJMNy4yNjc3MiAyLjAyNTE1TDcuOTc0ODMgMi43MzIyNUw0LjcwNzA2IDYuMDAwMDJMNy45NzQ4MyA5LjI2Nzc4TDcuMjY3NzIgOS45NzQ4OUwzLjI5Mjg1IDYuMDAwMDJaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K');
+    }
+
+    &.slick-prev {
+      left: var(--react-slick-left-button-offset);
+    }
+
+    &.slick-next {
+      right: var(--space-m);
+
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  & .slick-arrow.slick_prev {
+    left: var(--react-slick-left-button-offset);
+  }
+
+  & .slick-arrow.slick_next {
+    right: var(--space-m);
+  }
+
+  & .slick-dots {
+    position: relative;
+    bottom: 0;
+    display: flex !important;
+    flex-direction: var(--react-slick-indicators-direction);
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: var(--react-slick-indicators-width);
+    height: var(--react-slick-indicators-height);
+    padding: var(--space-xs);
+    background: var(--color-bg-default);
+    gap: var(--space-xs);
+
+    & > li {
+      width: auto;
+      height: auto;
+      margin: 0;
+      font-size: var(--space-xs);
+      line-height: 1em;
+
+      &.slick-active > button:not(.rsa--ReactSlickIndicator) {
+        background-color: var(--color-typo-brand);
+      }
+
+      & > button:not(.rsa--ReactSlickIndicator) {
+        width: var(--space-xs);
+        height: var(--space-xs);
+        margin: 0;
+        padding: 0;
+        background-color: var(--color-typo-ghost);
+        border: none;
+        border-radius: var(--control-radius);
+        font-size: 0;
+        line-height: 0;
+        transition: background-color 0.3s;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@keyframes ReactSlickAdapterAnimation--MixFocus {
+  from {
+    box-shadow:
+      0 0 0 0 var(--color-control-bg-focus),
+      0 0 0 0 var(--color-control-bg-active);
+  }
+
+  to {
+    box-shadow: 0 0 0 3px var(--color-control-bg-focus), 0 0 0 6px transparent;
+  }
+}

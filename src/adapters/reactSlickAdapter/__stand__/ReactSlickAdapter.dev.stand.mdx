@@ -1,0 +1,109 @@
+import { MdxMenu } from '@consta/stand';
+import {
+  RemadeInfo,
+  RemadeTableInfo,
+} from '../../../stand/components/RemadeInfo/RemadeInfo';
+import { ReactSlickAdapterExample } from './examples/ReactSlickAdapterExample/ReactSlickAdapterExample';
+import { ReactSlickAdapterExampleIndicatorsPosition } from './examples/ReactSlickAdapterExampleIndicatorsPosition/ReactSlickAdapterExampleIndicatorsPosition';
+import { ReactSlickAdapterExampleIndicatorsType } from './examples/ReactSlickAdapterExampleIndicatorsType/ReactSlickAdapterExampleIndicatorsType';
+
+```tsx
+import { reactSlickAdapter } from '@consta/react-slick-adapter/reactSlickAdapter';
+```
+
+<MdxMenu>
+
+- [Создание слайдера](#создание-слайдера)
+- [Индикаторы](#индикаторы)
+  - [Позиционирование](#позиционирование)
+  - [Тип](#тип)
+- [Импорт](#импорт)
+- [Список свойств](#свойства)
+
+</MdxMenu>
+
+## Создание слайдера
+
+Для того чтобы подключить слайдер необходимо импортировать `reactSlickAdapter` из пакета `@consta/react-slick-adapter`, а также `Slider` из пакета `react-slick`.
+
+```tsx
+import React from 'react';
+import Slider from 'react-slick';
+
+import { reactSlickAdapter } from '@consta/react-slick-adapter/reactSlickAdapter';
+
+const items = [image1, image2, image3, image4];
+
+export const ReactSlickAdapterExample = () => {
+  const settings = reactSlickAdapter({ dots: true, arrows: true });
+
+  return (
+    <Slider {...settings}>
+      {items.map((image) => (
+        <div>
+          <img alt="" src={image} />
+        </div>
+      ))}
+    </Slider>
+  );
+};
+```
+
+<ReactSlickAdapterExample />
+
+## Индикаторы
+
+Вы можете использовать индикаторы по умолчанию, указать их тип и положение, а также переопределить и указать свои собственные.
+
+### Позиционирование
+
+Позиция индикаторов задаётся через свойство `indicatorsPosition`, которое принимает значения `bottom` и `left`. Значение по умолчанию `bottom`.
+
+```tsx
+<Slider {...reactSlickAdapter({ indicatorsPosition: 'bottom' })}>
+    {items.map((image) => (
+        <div>
+            <img alt="" src={image} />
+        </div>
+    ))}
+</Slider>
+<Slider {...reactSlickAdapter({ indicatorsPosition: 'left' })}>
+    {items.map((image) => (
+        <div>
+            <img alt="" src={image} />
+        </div>
+    ))}
+</Slider>
+```
+
+<ReactSlickAdapterExampleIndicatorsPosition />
+
+### Тип
+
+Есть 4 разновидности индикаторов: `dots`, `number`, `icon`, `photo`. По умолчанию `dots`.
+
+Чтобы выбрать один из них, необходимо определить свойство `indicatorsType`.
+
+> Если вы используете тип `icon` или `image`, укажите свойство `items`, а также, при необходимости, геттеры `getItemIcon` и `getItemImage` для иконок и изображений соответсвенно.
+
+<ReactSlickAdapterExampleIndicatorsType />
+
+## Импорт
+
+```tsx
+import { reactSlickAdapter } from '@consta/react-slick-adapter/reactSlickAdapter';
+```
+
+## Свойства
+
+<RemadeTableInfo apiUrl="https://react-slick.neostack.com/docs/api" />
+
+### Свойства адаптера
+
+| Свойство              | Тип и значения                                                  | По умолчанию | Описание                                              |
+| --------------------- | --------------------------------------------------------------- | ------------ | ----------------------------------------------------- |
+| `items?`              | `ITEM[]`                                                        | -            | Список элементов                                      |
+| `getItemImage?`       | `(item: ITEM) => string `<code>&#124;</code>` undefined`        | -            | Результат функции используется в качестве изображения |
+| `getItemIcon?`        | `(item: ITEM) => IconComponent `<code>&#124;</code>` undefined` | -            | Результат функции используется в качестве иконки      |
+| `indicatorsPosition?` | `'bottom', 'left'`                                              | `'bottom'`   | Позиционирование индикаторов                          |
+| `indicatorsType?`     | `'dots', 'number', 'icon', 'image'`                             | `'dots'`     | Тип индикаторов                                       |

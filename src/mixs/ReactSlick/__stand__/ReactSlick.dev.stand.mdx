@@ -1,0 +1,43 @@
+import { ReactSlickExample } from './examples/ReactSlickExample/ReactSlickExample';
+
+```tsx
+import { cnReactSlick } from '@consta/react-slick-adapter/ReactSlick';
+```
+
+С помощью миксина `ReactSlick` можно стилизовать слайдер для дизайн-системы Consta.
+
+## Свойства
+
+| Параметры             | Тип                                 | По умолчанию | Описание                                                                                                                                                |
+| --------------------- | ----------------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `indicatorsPosition?` | `'bottom', 'left`                   | `bottom`     | Позиция индикаторов                                                                                                                                     |
+| `indicatorsType?`     | `'dots', 'number', 'icon', 'photo'` | `dots`       | Тип индикаторов (необходим если вы используете [`ReactSlickIndicator`](##LIBS.LIB.STAND/lib:react-slick-adapter/stand:mixs-reactslickindicator-stable)) |
+
+## Пример
+
+```tsx
+import React from 'react';
+import Slider from 'react-slick';
+
+import { cnReactSlick } from '@consta/react-slick-adapter/ReactSlick';
+
+const items = [image1, image2, image3, image4];
+
+export const ReactSlickExample = () => {
+  return (
+    <Slider
+      dots
+      arrows
+      className={cnReactSlick({ indicatorsPosition: 'bottom' })}
+    >
+      {items.map((image) => (
+        <div>
+          <img alt="" src={image} />
+        </div>
+      ))}
+    </Slider>
+  );
+};
+```
+
+<ReactSlickExample />
