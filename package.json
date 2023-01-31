@@ -1,6 +1,6 @@
 {
   "name": "@consta/react-slick-adapter",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "scripts": {
     "postinstall": "husky install",
     "tsc-dry-run": "tsc --noEmit",
