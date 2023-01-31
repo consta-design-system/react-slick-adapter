@@ -1,6 +1,6 @@
 {
-  "name": "@consta/slider",
-  "version": "0.0.0",
+  "name": "@consta/react-slick-adapter",
+  "version": "0.0.1",
   "scripts": {
     "postinstall": "husky install",
     "tsc-dry-run": "tsc --noEmit",
@@ -52,7 +52,9 @@
     "@consta/uikit": "^4.6.0"
   },
   "dependencies": {
-    "tiny-slider": "^2.9.4"
+    "@types/react-slick": "^0.23.10",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1"
   },
   "config": {
     "commitizen": {
@@ -94,8 +96,8 @@
     "@babel/preset-typescript": "^7.18.6",
     "@bem/sdk.naming.cell.match": "^0.1.3",
     "@bem/sdk.naming.presets": "^0.2.3",
-    "@consta/stand": "^0.0.77",
-    "@consta/uikit": "^4.6.0",
+    "@consta/stand": "^0.0.98",
+    "@consta/uikit": "^4.8.0",
     "@mdx-js/loader": "^2.1.5",
     "@oclif/command": "^1.8.16",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
