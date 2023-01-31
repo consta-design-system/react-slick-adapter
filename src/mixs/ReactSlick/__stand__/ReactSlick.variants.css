@@ -1,0 +1,8 @@
+.rsa--ReactSlickVariants {
+  width: 100%;
+  height: 100%;
+
+  .slick-slide img {
+    margin: auto;
+  }
+}
