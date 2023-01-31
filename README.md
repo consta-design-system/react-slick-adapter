@@ -8,9 +8,9 @@
 
 ```sh
 # NPM
-$ npm install @consta/slider
+$ npm install @consta/react-slick-adapter
 # Yarn
-$ yarn add @consta/slider
+$ yarn add @consta/react-slick-adapter
 ```
 
 ## Подключите зависимости
@@ -56,7 +56,7 @@ $ yarn test
 
 ## Документация
 
-[Посмотреть документацию и примеры](http://slider.consta.design/)
+[Посмотреть документацию и примеры](http://react-slick-adapter.consta.design/)
 
 ## Контрибьюторам
 
