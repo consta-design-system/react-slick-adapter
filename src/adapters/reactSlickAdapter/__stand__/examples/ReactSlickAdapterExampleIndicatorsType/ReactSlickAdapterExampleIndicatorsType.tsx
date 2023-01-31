@@ -9,10 +9,10 @@ import { IconSun } from '@consta/uikit/IconSun';
 import React from 'react';
 import Slider from 'react-slick';
 
-import Image1 from '##/__mocks__/image1.jpeg';
-import Image2 from '##/__mocks__/image2.png';
-import Image3 from '##/__mocks__/image3.jpeg';
-import Image4 from '##/__mocks__/image4.jpeg';
+import image1 from '##/__mocks__/image1.jpeg';
+import image2 from '##/__mocks__/image2.png';
+import image3 from '##/__mocks__/image3.jpeg';
+import image4 from '##/__mocks__/image4.jpeg';
 import { reactSlickAdapter } from '##/adapters/reactSlickAdapter/reactSlickAdapter';
 import { CnReactSlickPropIndicatorsType } from '##/mixs/ReactSlick';
 import { cn } from '##/utils/bem';
@@ -27,19 +27,19 @@ export type Item = {
 
 export const items: Item[] = [
   {
-    image: Image1,
+    image: image1,
     icon: IconSun,
   },
   {
-    image: Image2,
+    image: image2,
     icon: IconMoon,
   },
   {
-    image: Image3,
+    image: image3,
     icon: IconLightningBolt,
   },
   {
-    image: Image4,
+    image: image4,
     icon: IconBag,
   },
 ];

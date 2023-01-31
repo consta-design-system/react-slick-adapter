@@ -1,5 +1,48 @@
+import { ReactSlickIndicatorExample } from './examples/ReactSlickIndicatorExample/ReactSlickIndicatorExample';
+
 ```tsx
 import { ReactSlickIndicator } from '@consta/react-slick-adapter/ReactSlickIndicator';
 ```
 
 С помощью компонента `ReactSlickIndicator` можно переопределить дефолтные индикаторы.
+
+## Свойства
+
+| Параметры         | Тип                                 | По умолчанию | Описание        |
+| ----------------- | ----------------------------------- | ------------ | --------------- |
+| `index`           | `number`                            | `bottom`     | Идентификатор   |
+| `indicatorsType?` | `'dots', 'number', 'icon', 'photo'` | `dots`       | Тип индикаторов |
+| `icon?`           | `IconComponent`                     | -            | Иконка          |
+| `image?`          | `'string'`                          | -            | Картинка        |
+
+## Пример
+
+```tsx
+import React from 'react';
+import Slider from 'react-slick';
+
+import { ReactSlickIndicator } from '@consta/react-slick-adapter/ReactSlickIndicator';
+import { cnReactSlick } from '@consta/react-slick-adapter/ReactSlick';
+
+const items = [image1, image2, image3, image4];
+
+export const ReactSlickIndicatorExample = () => {
+  return (
+    <Slider
+      dots
+      className={cnReactSlick()}
+      customPaging={(index) => (
+        <ReactSlickIndicator index={index} indicatorsType="number" />
+      )}
+    >
+      {items.map((image) => (
+        <div>
+          <img alt="" src={image} />
+        </div>
+      ))}
+    </Slider>
+  );
+};
+```
+
+<ReactSlickIndicatorExample />

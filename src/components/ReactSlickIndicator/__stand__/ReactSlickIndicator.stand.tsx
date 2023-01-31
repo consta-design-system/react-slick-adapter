@@ -4,7 +4,7 @@ export default createStand({
   title: 'ReactSlickIndicator',
   id: 'ReactSlickIndicator',
   group: 'components',
-  description: 'Индикаторы.',
+  description: 'Индикатор, отрожающий позицию слайда.',
   version: '0.0.1',
   status: 'stable',
 });

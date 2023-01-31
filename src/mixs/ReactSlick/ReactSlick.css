@@ -180,7 +180,10 @@
         margin: 0;
         padding: 0;
         background-color: var(--color-typo-ghost);
+        border: none;
         border-radius: var(--control-radius);
+        font-size: 0;
+        line-height: 0;
         transition: background-color 0.3s;
 
         &::before {

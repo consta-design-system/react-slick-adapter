@@ -4,7 +4,7 @@ export default createStand({
   title: 'ReactSlickControl',
   id: 'ReactSlickControl',
   group: 'components',
-  description: 'Контролы.',
+  description: 'Кнопки для переключения слайдов.',
   version: '0.0.1',
   status: 'stable',
 });

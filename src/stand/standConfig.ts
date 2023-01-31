@@ -12,8 +12,9 @@ export const { createStand } = createConfig({
       initialOpen: true,
     },
     {
-      title: 'Компоненты',
-      id: 'components',
+      title: 'Адаптеры',
+      id: 'adapters',
+      view: 'card',
       initialOpen: true,
     },
     {
@@ -22,9 +23,8 @@ export const { createStand } = createConfig({
       initialOpen: true,
     },
     {
-      title: 'Адаптеры',
-      id: 'adapters',
-      view: 'card',
+      title: 'Компоненты',
+      id: 'components',
       initialOpen: true,
     },
   ],

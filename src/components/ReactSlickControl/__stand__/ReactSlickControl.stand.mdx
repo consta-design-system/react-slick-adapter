@@ -1,5 +1,44 @@
+import { ReactSlickControlExample } from './examples/ReactSlickControlExample/ReactSlickControlExample';
+
 ```tsx
 import { ReactSlickControl } from '@consta/react-slick-adapter/ReactSlickControl';
 ```
 
 С помощью компонента `ReactSlickControl` можно переопределить дефолтные контролы.
+
+## Свойства
+
+| Параметры | Тип              | По умолчанию | Описание     |
+| --------- | ---------------- | ------------ | ------------ |
+| `type?`   | `'prev', 'next'` | `prev`       | Тип контрола |
+
+## Пример
+
+```tsx
+import React from 'react';
+import Slider from 'react-slick';
+
+import { ReactSlickControl } from '@consta/react-slick-adapter/ReactSlickControl';
+import { cnReactSlick } from '@consta/react-slick-adapter/ReactSlick';
+
+const items = [image1, image2, image3, image4];
+
+export const ReactSlickControlExample = () => {
+  return (
+    <Slider
+      dots
+      className={cnReactSlick()}
+      nextArrow={<ReactSlickControl type="next" />}
+      prevArrow={<ReactSlickControl type="prev" />}
+    >
+      {items.map((image) => (
+        <div>
+          <img alt="" src={image} />
+        </div>
+      ))}
+    </Slider>
+  );
+};
+```
+
+<ReactSlickControlExample />
