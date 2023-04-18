@@ -5,6 +5,14 @@ export default createStand({
   id: 'ReactSlickIndicator',
   group: 'components',
   description: 'Индикатор позиции слайда.',
+  alias: [
+    'карусель',
+    'слайдер',
+    'slider',
+    'carousel',
+    'индикатор',
+    'indicator',
+  ],
   version: '0.0.1',
   status: 'stable',
 });

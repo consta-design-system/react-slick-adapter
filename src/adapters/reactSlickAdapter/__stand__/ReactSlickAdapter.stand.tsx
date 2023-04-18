@@ -6,6 +6,7 @@ export default createStand({
   group: 'adapters',
   description: 'Адаптер для react-slick',
   version: '0.0.1',
+  alias: ['адаптер', 'карусель', 'слайдер', 'slider', 'carousel'],
   status: 'canary',
   sandbox: 'reactslickadapter-4szur6',
   figma:
