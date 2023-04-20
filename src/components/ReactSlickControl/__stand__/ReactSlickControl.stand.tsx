@@ -5,6 +5,7 @@ export default createStand({
   id: 'ReactSlickControl',
   group: 'components',
   description: 'Кнопки для переключения слайдов.',
+  alias: ['карусель', 'слайдер', 'slider', 'carousel', 'кнопка'],
   version: '0.0.1',
   status: 'stable',
 });
