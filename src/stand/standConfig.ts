@@ -32,4 +32,6 @@ export const { createStand } = createConfig({
   image,
   description: 'Библиотека реализующая адаптер для react-slick.',
   repositoryUrl: 'https://github.com/consta-design-system/react-slick-adapter',
+  figmaUrl:
+    'https://www.figma.com/file/LKYyjgQ3khFHvXraZAG1n1/Consta-Components?type=design&node-id=2233-103376&t=h5q4xoKa2C1fSb91-0',
 });
