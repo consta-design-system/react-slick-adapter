@@ -1,15 +1,15 @@
 import './ReactSlickControl.css';
 
+import { IconArrowLeft } from '@consta/icons/IconArrowLeft';
+import { IconArrowRight } from '@consta/icons/IconArrowRight';
 import { Button } from '@consta/uikit/Button';
-import { IconArrowLeft } from '@consta/uikit/IconArrowLeft';
-import { IconArrowRight } from '@consta/uikit/IconArrowRight';
 import React from 'react';
 
 import { cn } from '##/utils/bem';
 
 const cnReactSlickControl = cn('ReactSlickControl');
 
-type Props = React.ComponentProps<typeof Button> & {
+type Props = Omit<React.ComponentProps<typeof Button>, 'type'> & {
   type?: 'prev' | 'next';
 };
 
@@ -23,6 +23,7 @@ export const ReactSlickControl = (props: Props) => {
       size="xs"
       view="clear"
       form="round"
+      type="button"
       {...otherProps}
     />
   );

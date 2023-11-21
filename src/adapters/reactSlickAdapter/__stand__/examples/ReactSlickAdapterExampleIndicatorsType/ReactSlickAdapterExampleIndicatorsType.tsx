@@ -1,11 +1,11 @@
 import './ReactSlickAdapterExampleIndicatorsType.css';
 
+import { IconComponent } from '@consta/icons/Icon';
+import { IconBag } from '@consta/icons/IconBag';
+import { IconLightningBolt } from '@consta/icons/IconLightningBolt';
+import { IconMoon } from '@consta/icons/IconMoon';
+import { IconSun } from '@consta/icons/IconSun';
 import { Example } from '@consta/stand';
-import { IconComponent } from '@consta/uikit/Icon';
-import { IconBag } from '@consta/uikit/IconBag';
-import { IconLightningBolt } from '@consta/uikit/IconLightningBolt';
-import { IconMoon } from '@consta/uikit/IconMoon';
-import { IconSun } from '@consta/uikit/IconSun';
 import React from 'react';
 import Slider from 'react-slick';
 
