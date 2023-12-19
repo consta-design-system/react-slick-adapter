@@ -39,7 +39,12 @@ export const ReactSlickIndicator = <
     }
     if (indicatorsType === 'number') {
       return (
-        <Text view="ghost" size="xs" className={cnReactSlickIndicator('Text')}>
+        <Text
+          view="ghost"
+          size="xs"
+          lineHeight="m"
+          className={cnReactSlickIndicator('Text')}
+        >
           {index + 1}
         </Text>
       );

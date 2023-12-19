@@ -1,8 +1,8 @@
-import { IconComponent } from '@consta/uikit/Icon';
-import { IconBag } from '@consta/uikit/IconBag';
-import { IconLightningBolt } from '@consta/uikit/IconLightningBolt';
-import { IconMoon } from '@consta/uikit/IconMoon';
-import { IconSun } from '@consta/uikit/IconSun';
+import { IconComponent } from '@consta/icons/Icon';
+import { IconBag } from '@consta/icons/IconBag';
+import { IconLightningBolt } from '@consta/icons/IconLightningBolt';
+import { IconMoon } from '@consta/icons/IconMoon';
+import { IconSun } from '@consta/icons/IconSun';
 
 import Image1 from '##/__mocks__/image1.jpeg';
 import Image2 from '##/__mocks__/image2.png';
