@@ -1,4 +1,4 @@
-import { MdxMenu } from '@consta/stand';
+import { MdxMenu, MdxInformer } from '@consta/stand';
 import {
   RemadeInfo,
   RemadeTableInfo,
@@ -24,7 +24,7 @@ import { reactSlickAdapter } from '@consta/react-slick-adapter/reactSlickAdapter
 
 ## Создание слайдера
 
-Для того чтобы подключить слайдер необходимо импортировать `reactSlickAdapter` из пакета `@consta/react-slick-adapter`, а также `Slider` из пакета `react-slick`.
+Чтобы подключить слайдер, необходимо импортировать `reactSlickAdapter` из пакета `@consta/react-slick-adapter`, а также `Slider` из пакета `react-slick`.
 
 ```tsx
 import React from 'react';
@@ -84,7 +84,11 @@ export const ReactSlickAdapterExample = () => {
 
 Чтобы выбрать один из них, необходимо определить свойство `indicatorsType`.
 
-> Если вы используете тип `icon` или `image`, укажите свойство `items`, а также, при необходимости, геттеры `getItemIcon` и `getItemImage` для иконок и изображений соответсвенно.
+<MdxInformer status="normal">
+
+Если вы используете тип `icon` или `image`, укажите свойство `items`, а также, при необходимости, геттеры `getItemIcon` и `getItemImage` для иконок и изображений соответственно.
+
+</MdxInformer>
 
 <ReactSlickAdapterExampleIndicatorsType />
 
